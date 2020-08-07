@@ -1,0 +1,33 @@
+000001 +---------------------------------------------------------------------------+
+000002 | Course: CPSC3780 - Data Communications and Networking                     |
+000003 | Professor: John Zhang                                                     |
+000004 | Term: Fall 2018                                                           |
+000005 | Group Members: Everett Blakley, Dallan McCarthy, and Mitchell Sulz-Martin |
+000006 +---------------------------------------------------------------------------+
+000007 
+000008 This document outlines the steps for running the program outlined by the CPSC3780 Course Project.
+000009 
+000010 This project was designed to run under two scenarios: 
+000011 Scenario 1: One server and one client
+000012 Scenario 2: One server and many (<= 5) clients
+000013 The following steps outline how to use the program under each scenario to transfer files:
+000014 
+000015 Scenario 1
+000016 1.  In the terminal, run cd path/to/project/S1
+000017 2.  To start the server, run cd server, and then make server
+000018 3.  Enter the port number (i.e. 30000). The server will attempt to open a socket on that port and the port right after (i.e. 30001). These ports will be used transmit ACK/NAK frames and DAT/NAT frames, respectively.
+000019 4.  In another terminal (on any machine on the network), run cd path/to/project/S1/client
+000020 5.  Run make clean, followed by make client.
+000021 6.  Enter the IP address of the server (142.66.140.XX), or type localhost if the server is running locally. 
+000022 7.  Enter the index of the filename you wish to transfer. If there are no errors, the file should begin to transmit into the terminal over the network. The program will also output the file transferred to the client directory with the same name as the input file.
+000023 8.  Repeat steps 4 - 7 to transfer another files
+000024 
+000025 Scenario 2
+000026 1.  In the terminal, run cd path/to/project/S2
+000027 2.  To start the server, run cd server, and then make server.
+000028 3.  In another terminal (on any machine on the network), run cd path/to/project/S2/client
+000029 4.  Run make clean, followed by make client. 
+000030 5.  Enter the IP address of the server (142.66.140.XX), or type localhost if the server is running locally.
+000031 6.  Enter the index of the filename you wish to transfer. If there are no errors, the file should begin to transmit into the terminal over the network. The program will also output the file transferred to the client directory with the same name as the input file.
+000032 7.  Repeat steps 4 - 6 to transfer another file
+000033 END OF FILE
